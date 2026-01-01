@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+.bacon_cache/
+.env
+datasets/GPQA/
+datasets/superGPQA/
+datasets/persuade/data/
+datasets/persuade/results/
+datasets/persuade/more-power/
+datasets/WebDesign/Commercial Banks/data/
+datasets/WebDesign/Commercial Banks/results/
+datasets/WebDesign/eCommerce/data/
+datasets/WebDesign/eCommerce/results/
+datasets/WebDesign/Universitites/data/
+datasets/WebDesign/Universitites/results/
+datasets/UIcrit/data/
+datasets/UIcrit/results/
+datasets/mqm/data/
+datasets/mqm/results/
+datasets/mqm/results_new_models/
+datasets/mqm/figures/
+BACON-paper/
+push-anonymous.sh

@@ -1,0 +1,50 @@
+{
+  "files.saveConflictResolution": "overwriteFileOnDisk",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "tectonic-synctex",
+      "command": "/home/colligo/personal-research/BACON/.vscode/tectonic-build.sh",
+      "args": [
+        "%DOC%",
+        "%DIR%"
+      ]
+    },
+    {
+      "name": "texlive-latexmk-xelatex",
+      "command": "/home/colligo/texlive/2026/bin/x86_64-linux/latexmk",
+      "env": {
+        "PATH": "/home/colligo/texlive/2026/bin/x86_64-linux:/usr/bin:/bin"
+      },
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "-e",
+        "$xelatex=q{/home/colligo/texlive/2026/bin/x86_64-linux/xelatex %O %S}",
+        "-e",
+        "$bibtex=q{/home/colligo/texlive/2026/bin/x86_64-linux/bibtex %O %S}",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "tectonic",
+      "tools": [
+        "tectonic-synctex"
+      ]
+    },
+    {
+      "name": "texlive-xelatex",
+      "tools": [
+        "texlive-latexmk-xelatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+  "latex-workshop.latex.recipe.default": "tectonic",
+  "latex-workshop.latex.outDir": "%DIR%"
+}
